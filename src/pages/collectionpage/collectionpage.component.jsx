@@ -11,7 +11,7 @@ import { ShopContext } from '../../providers/shop/shop.provider';
     // 1. const xxx = useContext(XXXX);
 const CollectionPage = ({ match }) => {
     const collectionsData = useContext(ShopContext);
-    const { title, items } = collectionsData[match.params.collectionId];
+    const { title, items } = collectionsData.collectionShop[match.params.collectionId];
     return (
         <div className="collection-page">
             <h2 className="title">
